@@ -1,14 +1,14 @@
 import random
 
-n=random.randint(1,100)
-a=-1
-guess=0
-while(a!=n):
-    guess +=1 
-    a=int(input("Guess the number(between 1-100 ): "))
-    if(a>n):
-        print("Lower number please")
-    elif(a<n):
-        print("Higher number please")
-
-print(f"You guessed the correct numbmer {n} in {guess} attempts")
+print("I'm guessing a number from 1 to 100")
+n = int(input("Enter the number:"))
+a=random.randint(1,100)
+i=0
+if(n>a):
+    print("Too high")
+    i=i+1
+elif(n<a):
+    print("Too low")
+    i=i+1
+elif (n==a):
+    print(f"Correct! You've guessed the number in {i} attempts.")
